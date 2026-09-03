@@ -1,0 +1,88 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+:root {
+  --sn-bg: #0b1410;
+  --sn-card: #14201a;
+  --sn-card-2: #101c15;
+  --sn-lime: #b7ff3f;
+  --sn-green: #3ddc84;
+  --sn-text: rgba(255, 255, 255, 0.9);
+  --sn-muted: rgba(255, 255, 255, 0.62);
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Barlow', sans-serif;
+  background:
+    radial-gradient(1200px 600px at 15% -10%, rgba(61, 220, 132, 0.12), transparent),
+    radial-gradient(900px 500px at 100% 0%, rgba(183, 255, 63, 0.08), transparent),
+    var(--sn-bg);
+  color: var(--sn-text);
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.sn-display {
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: .02em;
+}
+
+.sn-gradient-text {
+  background: linear-gradient(100deg, var(--sn-lime), var(--sn-green));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.sn-glow {
+  box-shadow: 0 0 0 1px rgba(183,255,63,.3), 0 18px 50px -18px rgba(183,255,63,.55);
+}
+
+@keyframes sn-rise {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.sn-rise { animation: sn-rise .55s cubic-bezier(.22,1,.36,1) both; }
+
+@keyframes sn-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
+}
+
+.sn-float { animation: sn-float 7s ease-in-out infinite; }
+
+.sn-lift {
+  transition: transform .25s cubic-bezier(.22,1,.36,1), box-shadow .25s ease, border-color .25s ease;
+}
+
+.sn-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 0 1px rgba(183,255,63,.25), 0 18px 50px -18px rgba(183,255,63,.45);
+}
+
+@keyframes sn-sweep {
+  0% { transform: translateX(-120%) skewX(-12deg); }
+  100% { transform: translateX(220%) skewX(-12deg); }
+}
+
+.sn-shine::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 40%;
+  background: linear-gradient(90deg, transparent, rgba(183,255,63,.35), transparent);
+  animation: sn-sweep 2.8s ease-in-out infinite;
+}
