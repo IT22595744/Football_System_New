@@ -97,7 +97,7 @@ function Dashboard() {
       <main className="flex-1 px-4 py-6 sm:px-6 lg:px-8">
         <div className="mx-auto flex max-w-6xl flex-col gap-6">
           <section className="overflow-hidden rounded-3xl border border-white/10 bg-[linear-gradient(180deg,rgba(20,32,26,0.96),rgba(13,22,18,0.95))] shadow-[0_40px_100px_-50px_rgba(0,0,0,1)]">
-            <div className="flex flex-col gap-6 p-5 sm:p-6 lg:flex-row lg:items-center lg:justify-between lg:p-8">
+            <div className="flex flex-col gap-6 p-2 sm:p-6 lg:flex-row lg:items-center lg:justify-between lg:p-8">
               <div>
                 <p className="text-[11px] uppercase tracking-[0.32em] text-[#b7ff3f]">National Teams</p>
                 <h2 className="sn-display mt-1 text-5xl leading-none sm:text-6xl">
