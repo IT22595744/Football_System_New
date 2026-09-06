@@ -46,7 +46,7 @@ function Landing() {
     setAuthError('')
     setIsSubmitting(true)
     try {
-      const response = await fetch('http://localhost:5000/users/log', {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/users/log`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(loginForm),
@@ -72,7 +72,7 @@ function Landing() {
     setIsSubmitting(true)
 
     try {
-      const response = await fetch('http://localhost:5000/users/reg', {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/users/reg`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
